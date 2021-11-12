@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Zen Dots";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/zen-dots/zen-dots-regular.woff2") format("woff2"),
+      url("/fonts/zen-dots/zen-dots-regular.woff") format("woff"),
+      url("/fonts/zen-dots/zen-dots-regular.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/poppins/poppins-regular.woff2") format("woff2"),
+      url("/fonts/poppins/poppins-regular.woff") format("woff"),
+      url("/fonts/poppins/poppins-regular.ttf") format("truetype");
+  }
+
+  html,
+  body,
+  #__next {
+    @apply h-full;
+  }
+
+  body {
+    @apply bg-gradient-to-t from-black to-chonk-blue;
+  }
+
+  /* Global Link Styles */
+  a {
+    @apply text-chonk-orange transition-colors;
+    @apply focus:outline-none;
+    @apply hover:text-chonk-orange-light;
+    @apply active:text-chonk-orange-dark;
+  }
+}
